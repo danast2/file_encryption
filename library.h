@@ -1,0 +1,6 @@
+#ifndef FILE_ENCRYPTION_LIBRARY_H
+#define FILE_ENCRYPTION_LIBRARY_H
+
+void hello();
+
+#endif //FILE_ENCRYPTION_LIBRARY_H
