@@ -3,4 +3,6 @@ project(file_encryption)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(file_encryption library.cpp)
+target_link_libraries(main.cpp cryptopp)
+add_library(file_encryption library.cpp
+        main.cpp)
