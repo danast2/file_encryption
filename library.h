@@ -1,22 +1,21 @@
 #ifndef FILE_ENCRYPTION_LIBRARY_H
 #define FILE_ENCRYPTION_LIBRARY_H
 
+#include <iostream>
+#include <fstream>
+#include <cryptopp/osrng.h>
+#include <cryptopp/aes.h>
+#include <cryptopp/modes.h>
+#include <cryptopp/filters.h>
+#include <cryptopp/files.h>
 #include <string>
 
-using std::string;
-
-class Manage_crypt{
-private:
-    string password;
-    string path_to_file;
-public:
-    Manage_crypt(string &pass, string &path): password(pass), path_to_file(path){}
-    void encrypt_file();
-    void decrypt_file();
-    string get_password();
-    string get_path_to_file();
-};
-
-void hello();
+namespace EncryptionLib{
+    const CryptoPP::byte* generate_IV();
+    //нет очистки памяти
+    void encrypt_file(const std::string& input_file, const std::string& output_file, const CryptoPP::byte* key, const CryptoPP::byte* iv);
+    //нет очистки памяти
+    void decrypt_file(const std::string& input_file, const std::string& output_file, const CryptoPP::byte* key, const CryptoPP::byte* iv);
+}
 
 #endif //FILE_ENCRYPTION_LIBRARY_H

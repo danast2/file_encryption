@@ -1,7 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/danast/file_encryption -B /Users/danast/file_encryption/cmake-build-debug
-CMake Error at CMakeLists.txt:6 (target_link_libraries):
-  Cannot specify link libraries for target "main.cpp" which is not built by
-  this project.
-
-
--- Configuring incomplete, errors occurred!
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/danast/file_encryption/cmake-build-debug
