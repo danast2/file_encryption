@@ -10,7 +10,8 @@ link_directories(/opt/homebrew/Cellar/cryptopp/8.9.0/lib)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(file_encryption library.cpp)
+add_executable(file_encryption library.cpp
+        example.cpp)
 
 # Связывание исполняемого файла с библиотекой Crypto++
 target_link_libraries(file_encryption cryptopp)

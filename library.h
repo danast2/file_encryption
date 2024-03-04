@@ -9,13 +9,16 @@
 #include <cryptopp/filters.h>
 #include <cryptopp/files.h>
 #include <string>
+#include <random>
+#include <regex>
 
 namespace EncryptionLib{
+    const CryptoPP::byte* generate_strong_password();
     const CryptoPP::byte* generate_IV();
-    //нет очистки памяти
-    void encrypt_file(const std::string& input_file, const std::string& output_file, const CryptoPP::byte* key, const CryptoPP::byte* iv);
-    //нет очистки памяти
-    void decrypt_file(const std::string& input_file, const std::string& output_file, const CryptoPP::byte* key, const CryptoPP::byte* iv);
+    //все ок, есть очистка памяти
+    void encrypt_file(const std::string& input_file, const CryptoPP::byte* key, const CryptoPP::byte* iv);
+    //все ок, есть очистка памяти
+    void decrypt_file(const std::string& input_file, const CryptoPP::byte* key, const CryptoPP::byte* iv);
 }
 
 #endif //FILE_ENCRYPTION_LIBRARY_H
