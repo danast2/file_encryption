@@ -25,7 +25,7 @@ int main(){
     std::cout << std::endl;
 
     EncryptionLib::encrypt_file(path_to_notcrypt, KEY, IV);
-
+    //в данном случае, ф-ция дешифрования будет работать с файлами формата "название_файла" + "_encrypted" + ".расширение_файла"
     EncryptionLib::decrypt_file(path_to_encr, KEY, IV);
     return 0;
 }
