@@ -15,9 +15,7 @@
 namespace EncryptionLib{
     const CryptoPP::byte* generate_strong_password();
     const CryptoPP::byte* generate_IV();
-    //все ок, есть очистка памяти
     void encrypt_file(const std::string& input_file, const CryptoPP::byte* key, const CryptoPP::byte* iv);
-    //все ок, есть очистка памяти
     void decrypt_file(const std::string& input_file, const CryptoPP::byte* key, const CryptoPP::byte* iv);
 }
 
